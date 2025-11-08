@@ -13,10 +13,10 @@
 }
 
 :root {
-  --bg-color: #d05a11;
-  --snd-bg-color: #eb8342;
+  --bg-color: #929291;
+  --snd-bg-color: #434643;
   --text-color: #fff;
-  --main-color: #041019ea;
+  --main-color: #222424ea;
 }
 
 html {
@@ -240,6 +240,7 @@ section {
 .about-content h3 {
 
   font-size: 3rem;
+color:  var(--main-color);
 }
 
 .about-content h3 span {
@@ -313,7 +314,7 @@ section {
 
 .portfolio-container {
   display: grid;
- grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 0 2rem;
 }
@@ -454,6 +455,9 @@ section {
   .header { padding: 2rem 3%; }
   section { padding: 8rem 3%; }
   .navbar a { margin-left: 2rem; }
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
 }
 
 /* Mobile */
@@ -498,6 +502,9 @@ section {
   .about-img img {
     width: 80vw;
   }
+
+   .portfolio-container {
+    grid-template-columns: 1fr;}
 }
 
 /* Small Phones */
@@ -511,12 +518,15 @@ section {
     flex-direction: column-reverse;
   }
   .portfolio-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
+    
   }
   .input-box{
     flex-direction: column;
   }
-
+  .portfolio-container {
+    grid-template-columns: 1fr; /* 1 column */
+  }
   .contact form .input-box input {
     width: 100%;
     
