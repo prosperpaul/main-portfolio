@@ -12,11 +12,12 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
+
 :root {
-  --bg-color: #929291;
-  --snd-bg-color: #586158;
-  --text-color: #fff;
-  --main-color: #222424ea;
+  --bg-color: #d4791dfb;
+  --snd-bg-color: #B87C4C;
+  --text-color: #e6edf3;
+  --main-color: #11224E; 
 }
 
 html {
