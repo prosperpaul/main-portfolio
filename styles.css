@@ -14,10 +14,10 @@
 
 
 :root {
-  --bg-color: #d4791dfb;
-  --snd-bg-color: #B87C4C;
-  --text-color: #e6edf3;
-  --main-color: #11224E; 
+  --bg-color: #fff;
+  --snd-bg-color: #fff;
+  --text-color: #000;
+  --main-color: #F87B1B; 
 }
 
 html {
@@ -196,7 +196,7 @@ section {
   border-radius: 4rem;
   box-shadow: 0 0 1rem var(--main-color);
   font-size: 1.6rem;
-  color: var(--bg-color);
+  color: var(--text-color);
   letter-spacing: 0.1rem;
   font-weight: 600;
   transition: 0.5s ease;
@@ -401,7 +401,7 @@ color:  var(--main-color);
   padding: 1.5rem;
   font-size: 1.6rem;
   color: var(--text-color);
-  background: var(--snd-bg-color);
+  background: var(--main-color);
   border-radius: 0.8rem;
   resize: none;
 }
@@ -450,7 +450,7 @@ textarea::placeholder {
 
 .footer-iconTop a i {
   font-size: 2.4rem;
-  color: var(--snd-bg-color);
+  color: var(--text-color);
 }
 
 /* ========== MEDIA QUERIES ========== */
