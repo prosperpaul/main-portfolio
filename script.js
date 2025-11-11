@@ -61,7 +61,7 @@ const typed = new Typed(".multiple-text", {
     "Biotechnologist",
   ],
 
-  strings: ["Front-End Developer", "Climate Advocate", "Graphic Designer"],
+  strings: ["Front-End Developer", "Climate Advocate",  "Graphic Designer"],
 
   typeSpeed: 70,
   backSpeed: 70,
