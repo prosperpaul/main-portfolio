@@ -12,7 +12,6 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
-
 :root {
   --bg-color: #e4d5d578;
   --snd-bg-color: #fff;
@@ -55,22 +54,14 @@ section {
 }
 
 .logo {
-
-  font-size: 4rem;
-
   font-size: 3rem;
-
   color: var(--main-color);
   font-weight: 700;
   cursor: pointer;
 }
 
 .navbar a {
-
-  font-size: 2rem;
-
   font-size: 1.8rem;
-
   color: var(--text-color);
   margin-left: 3rem;
   font-weight: 600;
@@ -80,6 +71,27 @@ section {
 .navbar a:hover,
 .navbar a.active {
   color: var(--main-color);
+}
+
+/* Dark Mode Toggle Button */
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+  transform: rotate(20deg);
 }
 
 /* Menu icon (mobile toggle) */
@@ -111,7 +123,8 @@ section {
 .home-content h3:nth-of-type(2) {
   margin-bottom: 2rem;
 }
- .multiple-text {
+
+.multiple-text {
   color: var(--main-color);
 }
 
@@ -119,19 +132,11 @@ section {
   font-size: 5rem;
   font-weight: 700;
   line-height: 1.3;
-
   color: #041019ea;
 }
 
 .home-content h1 span {
-  color: #fff;
-
   color: var(--main-color);
-
-}
-
-.home-content h1 span {
-  color: var(--text-color);
 }
 
 .home-content p {
@@ -223,15 +228,14 @@ section {
   border: 0.3rem solid var(--main-color);
 }
 
-
 .heading {
   text-align: center;
   font-size: 4.5rem;
   margin-bottom: 1rem;
 }
+
 .about-content {
   flex: 1 1 40rem;
-
 }
 
 .about-content h2 {
@@ -239,17 +243,13 @@ section {
 }
 
 .about-content h3 {
-
   font-size: 3rem;
-color:  var(--main-color);
+  color: var(--main-color);
 }
 
 .about-content h3 span {
-  color: #041019ea;
-
   font-size: 2.6rem;
   color: var(--main-color);
-
 }
 
 .about-content p {
@@ -365,7 +365,8 @@ color:  var(--main-color);
 .portfolio-layer p {
   font-size: 1.6rem;
 }
-.portfolio-layer a{
+
+.portfolio-layer a {
   font-size: 1.5rem;
   color: var(--text-color);
   margin-top: 1rem;
@@ -453,6 +454,73 @@ textarea::placeholder {
   color: var(--text-color);
 }
 
+/* ========== DARK MODE STYLES ========== */
+
+/* Dark mode color variables */
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --snd-bg-color: #242424;
+  --text-color: #fff;
+}
+
+/* Additional dark mode adjustments */
+body.dark-mode .portfolio-box img,
+body.dark-mode .about-img img,
+body.dark-mode .home-img img {
+  opacity: 0.9;
+  filter: brightness(0.95);
+}
+
+body.dark-mode .portfolio-layer {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), var(--main-color));
+}
+
+body.dark-mode .about-img img {
+  border-color: var(--main-color);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .home-content h1 {
+  color: #fff;
+}
+
+/* Smooth transition for all elements when switching modes */
+body, 
+.header, 
+section, 
+.services-box, 
+.portfolio-box, 
+.footer,
+.btn,
+.logo,
+.navbar a {
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ========== ANIMATE.CSS ENHANCEMENTS ========== */
+
+/* Smooth animation integration */
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/* Faster animations for small elements */
+.social-media a,
+.footer-iconTop a {
+  animation-duration: 0.5s !important;
+}
+
+/* Ensure animations don't conflict with hover effects */
+.services-box:hover,
+.portfolio-box:hover {
+  animation: none;
+}
+
 /* ========== MEDIA QUERIES ========== */
 
 /* Tablets */
@@ -509,8 +577,18 @@ textarea::placeholder {
     width: 80vw;
   }
 
-   .portfolio-container {
-    grid-template-columns: 1fr;}
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .animate__animated {
+    animation-duration: 0.8s;
+  }
+  
+  .animate__delay-1s { animation-delay: 0.3s; }
+  .animate__delay-2s { animation-delay: 0.5s; }
+  .animate__delay-3s { animation-delay: 0.7s; }
+  .animate__delay-4s { animation-delay: 0.9s; }
 }
 
 /* Small Phones */
@@ -520,27 +598,32 @@ textarea::placeholder {
   .home-content h1 {
     font-size: 3.8rem;
   }
-   .about {
+  
+  .about {
     flex-direction: column-reverse;
   }
+  
   .portfolio-container {
-    grid-template-columns: 1fr; 
-    
+    grid-template-columns: 1fr;
   }
-  .input-box{
+  
+  .input-box {
     flex-direction: column;
   }
-  .portfolio-container {
-    grid-template-columns: 1fr; /* 1 column */
-  }
+  
   .contact form .input-box input {
     width: 100%;
-    
   }
 
   .footer {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+  }
+  
+  .theme-toggle {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
   }
 }
