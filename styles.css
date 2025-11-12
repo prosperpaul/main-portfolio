@@ -420,6 +420,14 @@ textarea::placeholder {
   margin-top: 2rem;
   cursor: pointer;
 }
+.social-btns{
+  margin-top: 20px; 
+  display: flex; 
+  gap: 15px; 
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 /* ========== FOOTER ========== */
 .footer {
