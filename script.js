@@ -66,7 +66,7 @@ window.onscroll = () => {
 
 // Typed.js animation for multiple text in home section
 const typed = new Typed(".multiple-text", {
-  strings: ["Front-End Developer", "Biotechnologist",  "Climate Advocate", "Graphic Designer"],
+  strings: ["Front-End Developer", "Biotechnologist",  "Climate Advocate", ""],
   typeSpeed: 70,
   backSpeed: 70,
   backDelay: 1000,

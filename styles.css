@@ -217,13 +217,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
   background: var(--snd-bg-color);
   flex-wrap: wrap;
 }
 
 .about-img img {
-  width: 30rem;
+  width: 45rem;
   border-radius: 25px;
   border: 0.3rem solid var(--main-color);
 }
