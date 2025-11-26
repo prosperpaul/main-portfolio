@@ -3,243 +3,344 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chiamaka's Portfolio</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <meta name="description" content="Chiamaka Prosper - Senior Front-End Developer specializing in React, Next.js, and TypeScript. Building high-performance, accessible web solutions." />
+    <title>Chiamaka Prosper | Front-End Developer</title>
 
-    <link rel="icon" href="Assets/favicon.png" type="image/png">
+    <!-- Favicon -->
+    <link rel="icon" href="Assets/favicon.png" type="image/png" />
 
-    <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css" />
-
   </head>
   <body>
-    <header class="header animate__animated animate__fadeInDown">
-   <a href="https://www.linkedin.com/in/chiamaka-prosper-nkwazema" target="_blank" class="logo animate__animated  animate__bounceInDown ">Chiamaka</a>
+    <!-- Header -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#home" class="nav__logo">
+          <i class="fa-solid fa-leaf"></i>
+          <span>Chiamaka Prosper</span>
+        </a>
 
-       <div style="display: flex; align-items: center; gap: 1rem;">
-            <!-- Dark Mode Toggle -->
-            <div class="theme-toggle" id="theme-toggle">
-                <i class="fa-solid fa-moon"></i>
-            </div>
-      <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__link">Portfolio</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
 
-      <nav class="navbar  animate__animated  animate__bounceInRight" >
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+          <button class="nav__close" id="nav-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="nav__actions">
+          <!-- Theme Toggle -->
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
+            <i class="fa-solid fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
+          </button>
+
+          <a href="./Assets/Chiamaka-Resume2.pdf" target="_blank" class="btn btn--primary">
+            Download CV
+          </a>
+          <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
       </nav>
     </header>
-    <section class="home" id="home">
-      <div class="home-content  animate__animated animate__fadeInLeft">
-        <h3 class="animate__animated animate__bounce">Hi,</h3>
-        <h1> I'm Chiamaka <span>Prosper</span></h1>
-        <h3>A <span class="multiple-text"></span></h3>
-        <p>
-           Passionate about creating engaging, responsive, and user-friendly web applications using HTML, CSS, JavaScript, TypeScript, React and Next.JS. I am a graduate of Biotechnology (Bioinformatics option), which gives me a strong analytical and problem-solving foundation. At the same time, I work to raise awareness about climate change, promote sustainable solutions, and inspire action through education and advocacy. By combining technology and environmental responsibility, I aim to build digital experiences that are both impactful and meaningful.
 
-        </p>
-        <div class="social-media animate__animated animate__fadeInRight animate__delay-1s">
-          <a href="mailto:amakapaul4cbn@gmail.com" target="_blank" ><i class="fa-solid fa-envelope"></i></a>
-          <a href="https://x.com/slimzzzy25576?t=rjc2B1If639EdKFQMNNvZA&s=09" target="_blank" ><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/chiamaka-prosper-nkwazema"target="_blank" ><i class="fa-brands fa-linkedin"  ></i></a>
-          <a href="https://github.com/prosperpaul" target="_blank"><i class="fa-brands fa-square-github"  ></i></i></a>
+    <main class="main">
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <!-- Floating geometric shapes -->
+        <div class="hero__shapes">
+          <div class="hero__shape hero__shape--1"></div>
+          <div class="hero__shape hero__shape--2"></div>
+          <div class="hero__shape hero__shape--3"></div>
         </div>
-        <a href="#" class="btn" onclick="window.open('./Assets/Chiamaka-Resume2.pdf')"> Download CV</a>
-      </div>
-      <div class="home-img ">
-        <img src="./Assets/prof.me.jpg"  alt=" profile pics" class="animate__animated animate__bounceIn"/>
-      </div>
-    </section>
 
-
-   <section class="about" id="about">
-  <div class="about-img animate__animated animate__fadeInRight animate__delay-1s">
-    <img src="Assets/image.png" alt="Chiamaka Prosper Nkwazema" />
-  </div>
-  <div class="about-content animate__animated animate__fadeInLeft animate__delay-1s">
-    <h2 class="heading"><span>About </span> Me</h2>
-    <br />
-    <h3> Biotech. | Frontend Dev. | Climate Advocate</h3>
-    <p>
-      I’m a graduate of <strong>Biotechnology, Bioinformatics option</strong>, with a strong passion for building clean, responsive, and user-centered digital experiences. While my academic background equipped me with analytical and problem-solving skills in science and technology, I apply these skills in frontend development and climate advocacy. My work combines technology and sustainability to create meaningful impact.
-    </p>
-
-    <h4 class="about-projects ">Projects & Experience:</h4>
-    <ul class="about-bullets">
-      <li>💻 Responsive e-commerce app built with React, Tailwind CSS, and Redux Toolkit</li>
-      <li>🛡 Phishing detection web app using FastAPI and external APIs for real time safety analysis</li>
-      <li>👥 Team project (SchSpark)  Built user authentication system in Python; team won Africa Agility Bootcamp Cohort 8 Hackathon for innovation and collaboration</li>
-      <li>🌍 Headed the "Beat Plastic" climate awareness program on World Environment Day at a secondary school, educating students on plastic pollution, sustainability, and environmental protection</li>
-
-<li>🤝 Volunteered with ERA (Energy Robot Africa), supporting initiatives in renewable energy education and environmental advocacy</li>
-<li>📊 Researched and analyzed climate and sustainability data to inform outreach programs and advocacy campaigns</li>
-
-      <li>🧬 Assisted in laboratory procedures and experiments in the IVF unit, including sample preparation, analysis, and data recording</li>
-<li>💉 Supported biotechnological processes to ensure accurate results and maintain quality standards</li>
-
-
-    <p>
-      Through these projects and more, I’ve developed strong skills in React.js, Tailwind CSS, frontend architecture, while collaborating across teams to deliver real-world solutions. Outside tech, I actively advocate for climate awareness using storytelling and visuals to inspire sustainable action.
-    </p>
-
-    <a href="https://www.linkedin.com/in/chiamaka-prosper-nkwazema" target="_blank" class="btn">Read more</a>
-  </div>
-</section>
-
-
-    <section class="services" id="services">
-      <h2 class="heading  animate__animated animate__fadeInUp">My <span>Services</span></h2>
-      <div class="services-container">
-      
-        <div class="services-box animate__animated animate__fadeInUp animate__delay-1s">
-       <i class="fa-solid fa-dna"></i>
-          <h3>Biotechnologist</h3>
-          <p>
-          As a Biotechnology and Bioinformatics enthusiast, I am passionate about applying scientific knowledge and computational tools to solve real-world biological challenges. I specialize in analyzing biological data, interpreting genetic information, and supporting research in molecular biology, genomics, and healthcare. With a strong foundation in biotechnology principles, laboratory techniques, and analytical thinking, I focus on producing accurate and meaningful work that contributes to innovation in life sciences and health research.
-
+        <div class="hero__container container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Chiamaka Prosper:
+              <span class="hero__title-highlight">
+                <span class="typing-text"></span><span class="typing-cursor">|</span>
+              </span>
+            </h1>
+            <p class="hero__description">
+              Passionate about creating engaging, responsive, and user-friendly web applications.
             </p>
-          <a href="#about" class="btn">Read more</a>
+            <a href="#portfolio" class="btn btn--primary btn--large">
+              View My Work
+            </a>
+            <div class="hero__socials">
+              <a href="https://github.com/prosperpaul" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="GitHub">
+                <i class="fa-solid fa-code"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/chiamaka-prosper-nkwazema" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="LinkedIn">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://x.com/slimzzzy25576" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="Twitter">
+                <i class="fa-solid fa-at"></i>
+                <span>Twitter</span>
+              </a>
+            </div>
+          </div>
         </div>
+      </section>
 
-          <div class="services-box animate__animated animate__fadeInLeft animate__delay-1s">
-          <i class="fa-solid fa-code"></i>
-           <h3>Front-end Developer</h3>
-          <p>As a Frontend Developer, I focus on building and maintaining the visual and interactive sides of websites and web applications.
+      <!-- About Section -->
+      <section class="about section" id="about">
+        <div class="about__container container">
+          <h2 class="section__subtitle">About Me</h2>
 
-I love turning ideas into clean, responsive layouts and intuitive user interfaces that look great on any device. My work also involves optimizing performance, ensuring cross-browser compatibility, and integrating APIs to bring dynamic content to life.
+          <div class="about__content">
+            <div class="about__image-wrapper">
+              <img src="Assets/prof.me.jpg" alt="Chiamaka Prosper" class="about__image" loading="lazy" />
+            </div>
 
-Using tools like HTML, CSS, JavaScript, TypeScript, Tailwind css, React and Next.Js. I create fast, accessible, and engaging digital experiences that connect users to products in a simple, meaningful way.</p>
-          <a href="#about" class="btn">Read more</a>
+            <div class="about__info">
+              <h3 class="about__title">From Biotechnology to Beautiful Code</h3>
+              <p class="about__description">
+                A senior front-end developer with a background in Biotechnology, I merge analytical thinking with creative design. I specialize in building high-performance, accessible, and sustainable web solutions using modern technologies like React, Next.js, and TypeScript, with a passion for climate advocacy.
+              </p>
+
+              <div class="about__skills">
+                <div class="about__skill">
+                  <i class="fa-solid fa-check"></i>
+                  <span>React</span>
+                </div>
+                <div class="about__skill">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Next.js</span>
+                </div>
+                <div class="about__skill">
+                  <i class="fa-solid fa-check"></i>
+                  <span>TypeScript</span>
+                </div>
+                <div class="about__skill">
+                  <i class="fa-solid fa-check"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="about__skill">
+                  <i class="fa-solid fa-check"></i>
+                  <span>HTML5</span>
+                </div>
+                <div class="about__skill">
+                  <i class="fa-solid fa-check"></i>
+                  <span>CSS3</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-       
-        <div class="services-box animate__animated animate__fadeInDown animate__delay-1s">
-       
-        <i class="fas fa-tree " ></i>
-      
-          <h3>Climate Advocate</h3>
-          <p>
-           As a Climate Advocate, I’m passionate about raising awareness and driving action toward a more sustainable future. 
+      </section>
 
-I use my voice to educate communities, inspire individuals, and encourage organizations to make choices that reduce environmental impact. Through storytelling, advocacy, and collaboration, I aim to highlight real climate solutions that protect our planet, promote renewable energy, and support environmental justice for everyone.
+      <!-- Services Section -->
+      <section class="services section" id="services">
+        <div class="services__container container">
+          <h2 class="section__subtitle">Services</h2>
 
-For me, advocacy isn’t just about speaking up, it’s about helping others see that every action, no matter how small, can create change.
-           </p>
-          <a href="#about" class="btn">Read more</a>
-         </div>
-    </section>
+          <div class="services__grid">
+            <article class="service-card">
+              <div class="service-card__icon">
+                <i class="fa-solid fa-display"></i>
+              </div>
+              <h3 class="service-card__title">Responsive Web Development</h3>
+              <p class="service-card__description">
+                Crafting websites that provide an optimal viewing experience across a wide range of devices, from desktop computers to mobile phones.
+              </p>
+            </article>
 
-  <section class="portfolio" id="portfolio">
-      <h2 class="heading animate__animated animate__fadeInRight">Latest <span>Projects</span></h2>
-    <div class="portfolio-container animate__animated animate__fadeInUp">
-    <div class="portfolio-box ">
-     <img src="Assets/bankist.png"/>
-        <div class="portfolio-layer">
-          <h4>Bankist</h4>
-           <p>
-        A simple Bank App built with HTML, CSS, and JavaScript that lets users log in, view transactions, request loans with interest, close accounts, and auto logout after inactivity, a hands on project that strengthened my JavaScript and problem solving skills.
-           </p> 
-           <a href="https://bankist-kappa.vercel.app/" target="_blank">
-          <i class="fa-solid fa-up-right-from-square"></i></a>
+            <article class="service-card">
+              <div class="service-card__icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <h3 class="service-card__title">UI/UX Implementation</h3>
+              <p class="service-card__description">
+                Translating complex design mockups into pixel-perfect, interactive, and user-friendly interfaces with a focus on usability.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__icon">
+                <i class="fa-solid fa-gauge-high"></i>
+              </div>
+              <h3 class="service-card__title">Performance Optimization</h3>
+              <p class="service-card__description">
+                Enhancing web application speed and efficiency to ensure fast load times, smooth interactions, and a better user experience.
+              </p>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section class="portfolio section" id="portfolio">
+        <div class="portfolio__container container">
+          <h2 class="section__subtitle">Portfolio</h2>
+
+          <div class="portfolio__grid">
+            <article class="project-card">
+              <div class="project-card__image-wrapper">
+                <img src="Assets/ecommers.png" alt="Digital Accessories E-commerce App" class="project-card__image" loading="lazy" />
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Digital Accessories</h3>
+                <p class="project-card__description">
+                  A responsive e-commerce frontend with dynamic product search, real-time cart updates, and Redux state management.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">React</span>
+                  <span class="project-card__tag">Redux</span>
+                  <span class="project-card__tag">Tailwind</span>
+                </div>
+                <a href="https://shop4games.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label="View Digital Accessories project">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__image-wrapper">
+                <img src="Assets/bankist.png" alt="Bankist Banking App" class="project-card__image" loading="lazy" />
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Bankist</h3>
+                <p class="project-card__description">
+                  A banking app with user authentication, transactions, loans with interest, and auto-logout functionality.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">JavaScript</span>
+                  <span class="project-card__tag">HTML</span>
+                  <span class="project-card__tag">CSS</span>
+                </div>
+                <a href="https://bankist-kappa.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label="View Bankist project">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__image-wrapper">
+                <img src="Assets/brain-wave.png" alt="Brain-Wave React Project" class="project-card__image" loading="lazy" />
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Brain-Wave</h3>
+                <p class="project-card__description">
+                  A React-based web project exploring components, state management, props, and modern tooling with Vite.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">React</span>
+                  <span class="project-card__tag">Vite</span>
+                  <span class="project-card__tag">CSS</span>
+                </div>
+                <a href="https://brainwave-w.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label="View Brain-Wave project">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__image-wrapper">
+                <img src="Assets/task.png" alt="Task Manager App" class="project-card__image" loading="lazy" />
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Task Manager</h3>
+                <p class="project-card__description">
+                  A modern task manager with real-time updates, search, filtering, and Zustand for efficient state management.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">React</span>
+                  <span class="project-card__tag">Zustand</span>
+                  <span class="project-card__tag">Tailwind</span>
+                </div>
+                <a href="https://task-managing-app-1.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label="View Task Manager project">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="portfolio-box ">
-          <img src="Assets/ecommers.png"/>
-        <div class="portfolio-layer">
-          <h4>Digital Accessories</h4>
-          <p>This project is a responsive e-commerce frontend built with React and Tailwind CSS, featuring a dynamic product search, real time cart updates, and a mobile friendly navigation bar with a hamburger menu. It uses Redux Toolkit for state management and React Router for seamless navigation, delivering a modern and user focused shopping experience while demonstrating clean, scalable, and maintainable frontend architecture. </p>
-          <a href="https://shop4games.vercel.app/" target="_blank">
-          <i class="fa-solid fa-up-right-from-square"></i></a>
+      <!-- Contact Section -->
+      <section class="contact section" id="contact">
+        <div class="contact__container container">
+          <h2 class="section__subtitle">Contact</h2>
 
+          <div class="contact__content">
+            <div class="contact__info">
+              <h3 class="contact__title">Let's build something great.</h3>
+              <p class="contact__description">
+                Have a project in mind or just want to say hello? Feel free to send me a message. I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision.
+              </p>
+              <a href="mailto:amakapaul4cbn@gmail.com" class="contact__email">
+                <i class="fa-solid fa-envelope"></i>
+                <span>amakapaul4cbn@gmail.com</span>
+              </a>
+            </div>
+
+            <form class="contact__form" id="contact-form">
+              <div class="contact__form-group">
+                <input type="text" name="name" class="contact__input" placeholder="Name" required autocomplete="name" />
+              </div>
+              <div class="contact__form-group">
+                <input type="email" name="email" class="contact__input" placeholder="Email" required autocomplete="email" />
+              </div>
+              <div class="contact__form-group">
+                <textarea name="message" class="contact__textarea" placeholder="Message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full">
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
+      </section>
+    </main>
 
-      <div class="portfolio-box ">
-        <img src="Assets/brain-wave.png"/>
-        <div class="portfolio-layer">
-          <h4>Brain-Wave</h4>
-         <p>Brainwave is a React based web project I built in 2024 when I first started learning React. It’s a hands on project that helped me explore key React concepts such as components, state management, props, and event handling, as well as modern tooling like Vite and package management with npm/pnpm. The project includes interactive UI elements, scroll-lock functionality for modals or menus, and responsive design.</p>
-        <a href="https://brainwave-w.vercel.app/" target="_blank">
-          <i class="fa-solid fa-up-right-from-square" ></i></a>
-
-        </div>
-      </div>
-
-      <div class="portfolio-box ">
-        <img src="Assets/task.png"/>
-        <div class="portfolio-layer">
-          <h4>Task Manager</h4>
-          <p>A modern task manager built with React, Tailwind CSS, and Zustand for smooth, real-time task updates. It supports adding, editing, deleting, searching, and filtering tasks, all with a clean and responsive UI. Zustand keeps the state simple and efficient, while React components and Tailwind styling make the app fast, organized, and user-friendly.</p><a href="https://task-managing-app-1.vercel.app/" target="_blank">
-          <i class="fa-solid fa-up-right-from-square"></i></a>
-        </div>
-        </div>
-    
-      
-    </div>
-    </section>
-
-    <section class="contact" id="contact">
-  <h2 class="heading animate__animated animate__fadeInLeft">Contact <span>Me</span></h2>
-
-  <form action="mailto:amakapaul4cbn@gmail.com" method="post" enctype="text/plain" class="contact-form animate__animated animate__fadeInRight">
-    <div class="input-box">
-      <input type="text" placeholder="Full Name" class="text">
-      <input type="email" placeholder="Email Address">
-    </div>
-
-    <div class="input-box">
-      <input type="number" placeholder="Mobile Number">
-      <input type="text" placeholder="Email Subject">
-    </div>
-
-    <textarea cols="30" rows="10" placeholder="Your Message"></textarea>
-
-    <a href="mailto:amakapaul4cbn@gmail.com" class="btn">Send Message</a>
-
-    <!-- New Buttons Section -->
-    <div class="social-btns">
-      <!-- WhatsApp Button -->
-      <a href="https://wa.me/2348109992453?text=Hi%20Chiamaka!%20I%27m%20interested%20in%20your%20services." target="_blank" 
-         class="btn" 
-         style="background-color: #25D366; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 500;">
-         💬 Chat on WhatsApp
-      </a>
-
-      <!-- LinkedIn Button -->
-      <a href="https://www.linkedin.com/in/chiamaka-prosper-nkwazema" target="_blank" 
-         class="btn" 
-         style="background-color: #0077B5; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 500;">
-         🔗 Connect on LinkedIn
-      </a>
-    </div>
-  </form>
-</section>
-
+    <!-- Footer -->
     <footer class="footer">
-      <div class="footer-text">
-        <p>Copyright &copy; 2025 by @Chiamaka| All Rights Reserved.</p>
-
-      </div>
-      <div class="footer-iconTop">
-        <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+      <div class="footer__container container">
+        <p class="footer__copyright">
+          &copy; <span id="year"></span> Chiamaka Prosper. All Rights Reserved.
+        </p>
+        <div class="footer__socials">
+          <a href="https://github.com/prosperpaul" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="GitHub">
+            <i class="fa-solid fa-code"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/chiamaka-prosper-nkwazema" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="LinkedIn">
+            <i class="fa-solid fa-briefcase"></i>
+          </a>
+          <a href="mailto:amakapaul4cbn@gmail.com" class="footer__social-link" aria-label="Email">
+            <i class="fa-solid fa-at"></i>
+          </a>
+        </div>
       </div>
     </footer>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
   </body>
 </html>
