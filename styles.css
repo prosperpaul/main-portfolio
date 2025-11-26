@@ -186,6 +186,23 @@ ul {
   transform: translateY(0);
 }
 
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn--outline:active {
+  transform: translateY(0);
+}
+
 .btn--large {
   padding: var(--spacing-4) var(--spacing-8);
   font-size: var(--font-size-base);
