@@ -278,6 +278,11 @@
 
   // ==================== INITIALIZE ====================
   function init() {
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+
     themeManager.init();
     typingAnimation.init();
     navigation.init();

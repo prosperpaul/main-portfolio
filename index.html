@@ -12,10 +12,11 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css" />
@@ -51,10 +52,15 @@
         </div>
 
         <div class="nav__actions">
+          <!-- Call Me -->
+          <a href="tel:+2341234567890" class="nav__call" aria-label="Call me">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+
           <!-- Theme Toggle -->
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-            <i class="fa-solid fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
-            <i class="fa-solid fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
+            <i data-lucide="sun" class="theme-toggle__icon theme-toggle__icon--sun"></i>
+            <i data-lucide="moon" class="theme-toggle__icon theme-toggle__icon--moon"></i>
           </button>
 
           <a href="./Assets/Chiamaka-Resume2.pdf" target="_blank" class="btn btn--primary">
@@ -88,20 +94,25 @@
             <p class="hero__description">
               Passionate about creating engaging, responsive, and user-friendly web applications.
             </p>
-            <a href="#portfolio" class="btn btn--primary btn--large">
-              View My Work
-            </a>
+            <div class="hero__buttons">
+              <a href="#portfolio" class="btn btn--primary btn--large">
+                View My Work
+              </a>
+              <a href="./Assets/Chiamaka-Resume2.pdf" target="_blank" class="btn btn--outline btn--large">
+                Download CV
+              </a>
+            </div>
             <div class="hero__socials">
               <a href="https://github.com/prosperpaul" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="GitHub">
-                <i class="fa-solid fa-code"></i>
+                <i class="fa-brands fa-github"></i>
                 <span>GitHub</span>
               </a>
               <a href="https://www.linkedin.com/in/chiamaka-prosper-nkwazema" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="LinkedIn">
-                <i class="fa-solid fa-briefcase"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
                 <span>LinkedIn</span>
               </a>
               <a href="https://x.com/slimzzzy25576" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="Twitter">
-                <i class="fa-solid fa-at"></i>
+                <i class="fa-brands fa-x-twitter"></i>
                 <span>Twitter</span>
               </a>
             </div>
@@ -112,7 +123,10 @@
       <!-- About Section -->
       <section class="about section" id="about">
         <div class="about__container container">
-          <h2 class="section__subtitle">About Me</h2>
+          <div class="section__header">
+            <p class="section__label">Get to Know</p>
+            <h2 class="section__subtitle section__subtitle--accent">About Chiamaka</h2>
+          </div>
 
           <div class="about__content">
             <div class="about__image-wrapper">
@@ -120,35 +134,43 @@
             </div>
 
             <div class="about__info">
-              <h3 class="about__title">From Biotechnology to Beautiful Code</h3>
-              <p class="about__description">
-                With a unique background in Biotechnology, I bring analytical precision and scientific thinking to front-end development. I specialize in crafting high-performance, accessible web applications using React, Next.js, and TypeScript, blending technical expertise with creative problem-solving. Beyond code, I'm passionate about leveraging technology for climate advocacy and building sustainable digital solutions that make a positive impact. </p>
+              <div class="about__stats">
+                <div class="about__stat">
+                  <i class="fa-solid fa-user-tie"></i>
+                  <h4 class="about__stat-title">Experience</h4>
+                  <p class="about__stat-value">4+ Years Working</p>
+                </div>
+                <div class="about__stat">
+                  <i class="fa-brands fa-github"></i>
+                  <h4 class="about__stat-title">Github Repos</h4>
+                  <p class="about__stat-value">70+ Repositories</p>
+                </div>
+                <div class="about__stat">
+                  <i class="fa-solid fa-users"></i>
+                  <h4 class="about__stat-title">Clients</h4>
+                  <p class="about__stat-value">10+ Worldwide</p>
+                </div>
+                <div class="about__stat">
+                  <i class="fa-solid fa-folder-open"></i>
+                  <h4 class="about__stat-title">Projects</h4>
+                  <p class="about__stat-value">20+ Completed</p>
+                </div>
+              </div>
 
-              <div class="about__skills">
-                <div class="about__skill">
-                  <i class="fa-solid fa-check"></i>
-                  <span>React</span>
-                </div>
-                <div class="about__skill">
-                  <i class="fa-solid fa-check"></i>
-                  <span>Next.js</span>
-                </div>
-                <div class="about__skill">
-                  <i class="fa-solid fa-check"></i>
-                  <span>TypeScript</span>
-                </div>
-                <div class="about__skill">
-                  <i class="fa-solid fa-check"></i>
-                  <span>JavaScript</span>
-                </div>
-                <div class="about__skill">
-                  <i class="fa-solid fa-check"></i>
-                  <span>HTML5</span>
-                </div>
-                <div class="about__skill">
-                  <i class="fa-solid fa-check"></i>
-                  <span>CSS3</span>
-                </div>
+              <p class="about__description">
+                A passionate developer focused on building engaging web applications and innovative solutions. I specialize in full-stack development using technologies like Next.js, TypeScript, Prisma, and Redis, with a knack for integrating real-time features and scalable platforms. I love creating games, community platforms, and solutions that connect users while maintaining performance and simplicity.
+              </p>
+
+              <div class="about__buttons">
+                <a href="#contact" class="btn btn--primary">Let's Talk</a>
+                <a href="https://github.com/prosperpaul" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                  <i class="fa-brands fa-github"></i>
+                  Github
+                </a>
+                <a href="https://www.linkedin.com/in/chiamaka-prosper-nkwazema" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                  LinkedIn
+                </a>
               </div>
             </div>
           </div>
@@ -158,36 +180,39 @@
       <!-- Services Section -->
       <section class="services section" id="services">
         <div class="services__container container">
-          <h2 class="section__subtitle">Services</h2>
+          <div class="section__header">
+            <p class="section__label">What I Offer</p>
+            <h2 class="section__subtitle section__subtitle--accent">My Services</h2>
+          </div>
 
           <div class="services__grid">
             <article class="service-card">
               <div class="service-card__icon">
-                <i class="fa-solid fa-display"></i>
+                <i class="fa-solid fa-laptop-code"></i>
               </div>
             <h3 class="service-card__title">Responsive Web Development</h3>
               <p class="service-card__description">
-                Building fluid, mobile-first websites that adapt seamlessly to any screen size. From smartphones to desktops, your users get a flawless experience every time.
+                Building seamless experiences that adapt beautifully across all devices, ensuring your users stay engaged whether on desktop, tablet, or mobile.
               </p>
             </article>
 
             <article class="service-card">
               <div class="service-card__icon">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <i class="fa-solid fa-pen-ruler"></i>
               </div>
              <h3 class="service-card__title">UI/UX Implementation</h3>
               <p class="service-card__description">
-                Transforming design mockups into pixel-perfect, interactive interfaces that users love. Every interaction is crafted with attention to detail, accessibility, and seamless usability.
+                Bringing designs to life with pixel-perfect precision, creating intuitive interfaces that delight users and drive meaningful interactions.
               </p>
             </article>
 
             <article class="service-card">
               <div class="service-card__icon">
-                <i class="fa-solid fa-gauge-high"></i>
+                <i class="fa-solid fa-bolt"></i>
               </div>
              <h3 class="service-card__title">Performance Optimization</h3>
               <p class="service-card__description">
-                Optimizing every aspect of your web application for lightning-fast load times and smooth interactions. Through code splitting, lazy loading, and performance auditing, I ensure your site delivers speed that keeps users engaged.
+                Supercharging your web applications for lightning-fast load times and buttery-smooth interactions that keep users coming back.
               </p>
             </article>
           </div>
@@ -197,15 +222,30 @@
       <!-- Portfolio Section -->
       <section class="portfolio section" id="portfolio">
         <div class="portfolio__container container">
-          <h2 class="section__subtitle">Portfolio</h2>
+          <div class="section__header">
+            <p class="section__label">My Recent Work</p>
+            <h2 class="section__subtitle section__subtitle--accent">Portfolio</h2>
+          </div>
 
           <div class="portfolio__grid">
+            <!-- Project Cards -->
             <article class="project-card">
               <div class="project-card__image-wrapper">
                 <img src="Assets/ecommers.png" alt="Digital Accessories E-commerce App" class="project-card__image" loading="lazy" />
+                <div class="project-card__overlay">
+                  <a href="https://shop4games.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Live Demo
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__btn project-card__btn--secondary">
+                    <i class="fa-brands fa-github"></i>
+                    Source
+                  </a>
+                </div>
               </div>
               <div class="project-card__content">
-               <h3 class="project-card__title">Digital Accessories</h3>
+                <span class="project-card__number">01</span>
+                <h3 class="project-card__title">Digital Accessories</h3>
                 <p class="project-card__description">
                   A modern e-commerce platform featuring dynamic product filtering, real-time cart management, and seamless checkout flow. Built with React and Redux for optimal performance and state management.
                 </p>
@@ -214,18 +254,22 @@
                   <span class="project-card__tag">Redux</span>
                   <span class="project-card__tag">Tailwind</span>
                 </div>
-                <a href="https://shop4games.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label="View Digital Accessories project">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
               </div>
             </article>
 
             <article class="project-card">
               <div class="project-card__image-wrapper">
                 <img src="Assets/bankist.png" alt="Bankist Banking App" class="project-card__image" loading="lazy" />
+                <div class="project-card__overlay">
+                  <a href="https://bankist-kappa.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Live Demo
+                  </a>
+                </div>
               </div>
               <div class="project-card__content">
-               <h3 class="project-card__title">Bankist</h3>
+                <span class="project-card__number">02</span>
+                <h3 class="project-card__title">Bankist</h3>
                 <p class="project-card__description">
                   A feature-rich banking application with secure user authentication, transaction management, and loan processing with interest calculations. Includes automatic session timeout for enhanced security.
                 </p>
@@ -234,18 +278,22 @@
                   <span class="project-card__tag">HTML</span>
                   <span class="project-card__tag">CSS</span>
                 </div>
-                <a href="https://bankist-kappa.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label="View Bankist project">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
               </div>
             </article>
 
             <article class="project-card">
               <div class="project-card__image-wrapper">
                 <img src="Assets/brain-wave.png" alt="Brain-Wave React Project" class="project-card__image" loading="lazy" />
+                <div class="project-card__overlay">
+                  <a href="https://brainwave-w.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Live Demo
+                  </a>
+                </div>
               </div>
               <div class="project-card__content">
-               <h3 class="project-card__title">Brain-Wave</h3>
+                <span class="project-card__number">03</span>
+                <h3 class="project-card__title">Brain-Wave</h3>
                 <p class="project-card__description">
                   A modern React application showcasing advanced component architecture, efficient state management, and lightning-fast performance powered by Vite. Demonstrates best practices in contemporary front-end development.
                 </p>
@@ -254,18 +302,22 @@
                   <span class="project-card__tag">Vite</span>
                   <span class="project-card__tag">CSS</span>
                 </div>
-                <a href="https://brainwave-w.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label="View Brain-Wave project">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
               </div>
             </article>
 
             <article class="project-card">
               <div class="project-card__image-wrapper">
                 <img src="Assets/task.png" alt="Task Manager App" class="project-card__image" loading="lazy" />
+                <div class="project-card__overlay">
+                  <a href="https://task-managing-app-1.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Live Demo
+                  </a>
+                </div>
               </div>
               <div class="project-card__content">
-               <h3 class="project-card__title">Task Manager</h3>
+                <span class="project-card__number">04</span>
+                <h3 class="project-card__title">Task Manager</h3>
                 <p class="project-card__description">
                   A streamlined productivity app with real-time task updates, advanced search and filtering capabilities, and lightning-fast state management powered by Zustand. Built for efficiency and intuitive task organization.
                 </p>
@@ -274,9 +326,6 @@
                   <span class="project-card__tag">Zustand</span>
                   <span class="project-card__tag">Tailwind</span>
                 </div>
-                <a href="https://task-managing-app-1.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label="View Task Manager project">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
               </div>
             </article>
           </div>
@@ -286,29 +335,49 @@
       <!-- Contact Section -->
       <section class="contact section" id="contact">
         <div class="contact__container container">
-          <h2 class="section__subtitle">Contact</h2>
+          <div class="section__header">
+            <p class="section__label">Get In Touch</p>
+            <h2 class="section__subtitle section__subtitle--accent">Contact Me</h2>
+          </div>
 
           <div class="contact__content">
             <div class="contact__info">
-              <h3 class="contact__title">Let's build something great.</h3>
-              <p class="contact__description">
-                Have a project in mind or just want to connect? I'm always open to discussing new opportunities, collaborating on creative ideas, or bringing ambitious visions to life. Let's create something exceptional together.
-              </p>
-              <a href="mailto:amakapaul4cbn@gmail.com" class="contact__email">
-                <i class="fa-solid fa-envelope"></i>
-                <span>amakapaul4cbn@gmail.com</span>
-              </a>
+              <div class="contact__card">
+                <div class="contact__card-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact__card-details">
+                  <h4 class="contact__card-title">Email</h4>
+                  <p class="contact__card-value">amakapaul4cbn@gmail.com</p>
+                  <a href="mailto:amakapaul4cbn@gmail.com" class="contact__card-link">
+                    Send a Message <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact__card">
+                <div class="contact__card-icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact__card-details">
+                  <h4 class="contact__card-title">WhatsApp</h4>
+                  <p class="contact__card-value">+234 123 456 7890</p>
+                  <a href="https://wa.me/2341234567890" target="_blank" rel="noopener noreferrer" class="contact__card-link">
+                    Send a Message <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
             </div>
 
             <form class="contact__form" id="contact-form">
               <div class="contact__form-group">
-                <input type="text" name="name" class="contact__input" placeholder="Name" required autocomplete="name" />
+                <input type="text" name="name" class="contact__input" placeholder="Your Full Name" required autocomplete="name" />
               </div>
               <div class="contact__form-group">
-                <input type="email" name="email" class="contact__input" placeholder="Email" required autocomplete="email" />
+                <input type="email" name="email" class="contact__input" placeholder="Your Email" required autocomplete="email" />
               </div>
               <div class="contact__form-group">
-                <textarea name="message" class="contact__textarea" placeholder="Message" rows="5" required></textarea>
+                <textarea name="message" class="contact__textarea" placeholder="Your Message" rows="5" required></textarea>
               </div>
               <button type="submit" class="btn btn--primary btn--full">
                 Send Message
@@ -327,13 +396,13 @@
         </p>
         <div class="footer__socials">
           <a href="https://github.com/prosperpaul" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="GitHub">
-            <i class="fa-solid fa-code"></i>
+            <i class="fa-brands fa-github"></i>
           </a>
           <a href="https://www.linkedin.com/in/chiamaka-prosper-nkwazema" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="LinkedIn">
-            <i class="fa-solid fa-briefcase"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
           </a>
           <a href="mailto:amakapaul4cbn@gmail.com" class="footer__social-link" aria-label="Email">
-            <i class="fa-solid fa-at"></i>
+            <i class="fa-solid fa-envelope"></i>
           </a>
         </div>
       </div>
