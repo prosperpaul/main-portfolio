@@ -1453,6 +1453,26 @@ body.light-mode .contact__form {
     display: none;
   }
 
+  /* Overlay for mobile menu - FIXED */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+  z-index: 999; /* Lower than nav menu so menu is clickable */
+  pointer-events: none; /* Don't block clicks when hidden */
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto; /* Only receive clicks when menu is open */
+}
   /* Hero */
   .hero__title {
     font-size: clamp(2rem, 8vw, 3rem);
