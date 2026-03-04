@@ -317,14 +317,32 @@ body.light-mode .header.scrolled {
   align-items: center;
   gap: var(--spacing-4);
 }
+.nav__toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent-subtle);
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  color: var(--color-accent);
+  font-size: var(--font-size-lg);
+  transition: all var(--transition-base);
+}
 
-.nav__toggle,
+.nav__toggle:hover {
+  background: var(--color-accent);
+  color: #ffffff;
+  transform: rotate(20deg) scale(1.1);
+  box-shadow: var(--shadow-glow);
+}
+
 .nav__close {
   display: none;
   font-size: var(--font-size-xl);
   color: var(--color-text-primary);
 }
-
 /* Call Button */
 .nav__call {
   width: 44px;
@@ -1607,25 +1625,6 @@ body.light-mode .contact__form {
   .project-card__content {
     padding: var(--spacing-4);
   }
-}
-
-/* Overlay for mobile menu */
-.nav-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--transition-base), visibility var(--transition-base);
-  z-index: 1000;
-}
-
-.nav-overlay.active {
-  opacity: 1;
-  visibility: visible;
 }
 
 /* Focus styles for accessibility */

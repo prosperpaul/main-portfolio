@@ -1,7 +1,3 @@
-/**
- * Chiamaka Prosper - Portfolio
- * Modern, clean JavaScript with theme toggle and typing animation
- */
 
 (function () {
   'use strict';
@@ -47,7 +43,7 @@
 
   // ==================== TYPING ANIMATION ====================
   const typingAnimation = {
-    words: ['Front-End Developer', 'React Specialist', 'Climate Advocate'],
+    words: ['Front-End Developer', 'React Specialist', 'UI/UX Developer', 'Next.js Engineer'],
     currentWordIndex: 0,
     currentCharIndex: 0,
     isDeleting: false,
@@ -65,7 +61,6 @@
       const currentWord = this.words[this.currentWordIndex];
 
       if (this.isDeleting) {
-        // Deleting characters
         this.currentCharIndex--;
         elements.typingText.textContent = currentWord.substring(0, this.currentCharIndex);
 
@@ -78,7 +73,6 @@
 
         setTimeout(() => this.type(), this.deleteSpeed);
       } else {
-        // Typing characters
         this.currentCharIndex++;
         elements.typingText.textContent = currentWord.substring(0, this.currentCharIndex);
 
@@ -94,57 +88,70 @@
   };
 
   // ==================== MOBILE NAVIGATION ====================
-  const navigation = {
-    overlay: null,
+const navigation = {
+  overlay: null,
 
-    init() {
-      this.createOverlay();
-      this.bindEvents();
-    },
+  init() {
+    this.createOverlay();
+    this.bindEvents();
+  },
 
-    createOverlay() {
-      this.overlay = document.createElement('div');
-      this.overlay.classList.add('nav-overlay');
-      document.body.appendChild(this.overlay);
-    },
+  createOverlay() {
+    this.overlay = document.createElement('div');
+    this.overlay.classList.add('nav-overlay');
+    document.body.appendChild(this.overlay);
+  },
 
-    bindEvents() {
-      if (elements.navToggle) {
-        elements.navToggle.addEventListener('click', () => this.openMenu());
-      }
+  bindEvents() {
+    if (elements.navToggle) {
+      elements.navToggle.addEventListener('click', () => this.openMenu());
+    }
 
-      if (elements.navClose) {
-        elements.navClose.addEventListener('click', () => this.closeMenu());
-      }
+    if (elements.navClose) {
+      elements.navClose.addEventListener('click', () => this.closeMenu());
+    }
 
-      if (this.overlay) {
-        this.overlay.addEventListener('click', () => this.closeMenu());
-      }
+    if (this.overlay) {
+      this.overlay.addEventListener('click', () => this.closeMenu());
+    }
 
-      elements.navLinks.forEach((link) => {
-        link.addEventListener('click', () => this.closeMenu());
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && elements.navMenu.classList.contains('active')) {
+    elements.navLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          this.closeMenu();
+          setTimeout(() => {
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 350);
+        } else {
           this.closeMenu();
         }
       });
-    },
+    });
 
-    openMenu() {
-      elements.navMenu.classList.add('active');
-      this.overlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    },
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && elements.navMenu.classList.contains('active')) {
+        this.closeMenu();
+      }
+    });
+  },
 
-    closeMenu() {
-      elements.navMenu.classList.remove('active');
-      this.overlay.classList.remove('active');
-      document.body.style.overflow = '';
-    },
-  };
+  openMenu() {
+    elements.navMenu.classList.add('active');
+    this.overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  },
 
+  closeMenu() {
+    elements.navMenu.classList.remove('active');
+    this.overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  },
+};
   // ==================== HEADER SCROLL EFFECT ====================
   const headerScroll = {
     scrollThreshold: 50,
@@ -252,7 +259,7 @@
   // ==================== SMOOTH SCROLL ====================
   const smoothScroll = {
     init() {
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      document.querySelectorAll('a[href^="#"]:not(.nav__link)').forEach((anchor) => {
         anchor.addEventListener('click', (e) => this.handleClick(e, anchor));
       });
     },
@@ -278,7 +285,6 @@
 
   // ==================== INITIALIZE ====================
   function init() {
-    // Initialize Lucide icons
     if (typeof lucide !== 'undefined') {
       lucide.createIcons();
     }
